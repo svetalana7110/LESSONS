@@ -65,9 +65,12 @@ else{
 5 -> 2, 4
 8 -> 2, 4, 6, 8
 */
+Console.WriteLine("Введите число");
+int N = int.Parse(Console.ReadLine());
+
 int a = 0;
 
-while (a < 28){
+while (a < N){
      a = a + 2;
         Console.Write($"{a} ");
 }
