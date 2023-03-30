@@ -75,7 +75,7 @@ Console.WriteLine("Введите трехзначное число");
 int N = int.Parse(Console.ReadLine());
 
 if (N > 99 & N < 1000){
-    Console.WriteLine(N%10);
+    Console.WriteLine(N % 10);
  }
 else{
     Console.WriteLine("Введите трехзначное число");
