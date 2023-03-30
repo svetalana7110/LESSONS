@@ -75,7 +75,7 @@ int randomValue = random.Next( 100, 1000);
 int firstDigit = randomValue / 100 ;
 int secondDigit = randomValue % 10;
 Console.WriteLine(randomValue);
-Console.WriteLine($"{firstDigit} {secondDigit}");
+Console.WriteLine($"{randomValue} -> {firstDigit} {secondDigit}");
 
 Random random = new Random();
 int randomValue = random.Next( 100, 1000);
@@ -87,9 +87,55 @@ Console.WriteLine(firstDigit + secondDigit);
 
 //Напишите программу, которая будет принимать на вход два числа и выводить, является ли
 второе число кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток 
-от деления.
+от деления. 
 ● 34, 5 -> не кратно, остаток 4
 ● 16, 4 -> кратно
+
+Console.WriteLine("Введите первое число");
+int number1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int number2 = int.Parse(Console.ReadLine());
+int result = number1 % number2;
+
+if (result == 0)
+{ 
+    Console.WriteLine(result);
+    Console.WriteLine("кратно");
+} 
+else
+{Console.WriteLine(result);
+Console.WriteLine("не кратно");
+}
+Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7
+и 23.
+● 14 -> нет
+● 46 -> нет
+● 161 -> да
 */
-int c = 4;
-int g = 3;
+Console.WriteLine("Введите число");
+int a = int.Parse(Console.ReadLine());
+if (a % 7 == 0 & a % 23 == 0 )
+{ 
+    Console.WriteLine($"{a} -> да");
+    
+} 
+else
+{
+    Console.WriteLine($"{a} -> нет");
+}
+/*
+//Напишите программу, которая принимает на вход два числа и проверяет, является ли одно
+число квадратом другого.
+//● 5, 25 -> да ● -4, 16 -> да ● 25, 5 -> да ● 8,9 -> нет
+
+Console.WriteLine("Введите два числа");
+int a = int.Parse(Console.ReadLine()); 
+int b = int.Parse(Console.ReadLine()); 
+
+if (a == b * b | b == a * a ){
+    Console.WriteLine($"{a},{b} -> да");
+}
+else{
+    Console.WriteLine($"{a},{b} -> нет");
+}
+*/
