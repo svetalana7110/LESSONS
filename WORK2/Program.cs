@@ -15,6 +15,7 @@ if (a > 99 & a < 1000){
 else{   
     Console.WriteLine("Введите трехзначное число");
 }
+
 Напишите программу, которая принимает на вход цифру, обозначающую день
 недели, и проверяет, является ли этот день выходным.
 
@@ -38,7 +39,7 @@ if (a < 1 | a > 7){
 645 -> 5
 78 -> третьей цифры нет
 32679 -> 6
-*/
+
 string input = Console.ReadLine(); 
 int number = int.Parse(input);
 if (number > 99){
@@ -53,4 +54,14 @@ if (number > 99){
 }
 if (number < 100){
     Console.WriteLine("Третьей цифры нет");
+}
+*/
+Console.WriteLine("Введите число");
+int a = int.Parse(Console.ReadLine());
+
+if (a > 99 & a < 1000){
+    Console.WriteLine(a / 10 % 10);
+}
+else{   
+    Console.WriteLine("Введите трехзначное число");
 }
