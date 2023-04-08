@@ -2,6 +2,7 @@
 /*int x = int.Parse(Console.ReadLine());
 
 int y = int.Parse(Console.ReadLine());
+
  false -  не правильно (и), то второе не проверяет
 if           (x == 0 && y == 0){
      true - правильно (или), то второе не проверяет
@@ -51,7 +52,8 @@ int GetNumberOfQuarter(int x, int y)
 
     return 0;
 }
-Напишите программу, которая по заданному номеру четверти, показывает 
+Напишите программу, которая по заданному номеру четверти,
+показывает 
 диапазон возможных координат точек в этой четверти (x и y).
 
 Console.WriteLine("Введите номер четверти");
@@ -97,6 +99,7 @@ int xb = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите Y координату точки В ");
 int yb = int.Parse(Console.ReadLine());
 
+
 double result = Math.Sqrt((xb - xa)*(xb - xa) + (yb - ya)*(yb - ya));
 
 Console.WriteLine(result);
@@ -119,7 +122,7 @@ double GetDistance(double xa,double xb,double ya,double yb)
     return Math.Sqrt(Math.Pow((xb - xa),2) + Math.Pow((yb - ya),2));
 }
 Напишите программу, которая принимает на вход число (N) и выдаёт таблицу
- квадратов чисел
+квадратов чисел
 от 1 до N.
 ● 5 -> 1, 4, 9, 16, 25.
 ● 2 -> 1,4
