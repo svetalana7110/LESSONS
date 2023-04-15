@@ -56,7 +56,7 @@ void Cube (int N){
 12821 -> да
 
 23432 -> да
-*/
+
 Console.WriteLine("Введите число:  ");
 int i = int.Parse(Console.ReadLine());
 if (i > 9999 & i < 100000)
@@ -77,3 +77,7 @@ else
 {   
     Console.WriteLine("Введите пятизначное число ");
 }
+*/
+string tmp = "12321";
+string reversed = tmp.Reverse();
+Console.WriteLine(tmp == reversed);
