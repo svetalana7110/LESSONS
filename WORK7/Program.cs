@@ -150,3 +150,5 @@ void ArithmeticMeanColumnElements(int[,] matr)
         Console.WriteLine();               
     }   
 }*/
+//Как сделать, чтобы в консоль выводило ответ с одной цифрой 
+//после запятой?
