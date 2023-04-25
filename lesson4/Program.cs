@@ -49,8 +49,58 @@ for (int i = 0; i < array.Length; i++)
 for (int i = 0; i < array.Length; i++)
 {
   Console.WriteLine(array[i]); 
-} */
+}
+новый код 
+int[] array = RandomArray();
+PrintArray(array);
+int[] RandomArray()
+{
+    int[] array = new int[8];
 
+    Random rand = new Random();
+
+    for (int i = 0; i < array.Length; i++)
+        array [i] = rand.Next(0,2); 
+      return array;
+}
+void PrintArray(int[]array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine(array[i]);   
+    }
+}
+Cоздать массив, чтобы он умел 1.принимать 
+длину массива, не только 8, но любую другую
+котррую захотим. 2. Чтобы можно было передавать
+диапазон цифр, например от 1 до 100.
+int[] array = RandomArray();*/
+Console.WriteLine("Длина массива");
+int size = int.Parse(Console.ReadLine());
+Console.WriteLine("Минимальное");
+int min = int.Parse(Console.ReadLine());
+Console.WriteLine("Максимальное");
+int max = int.Parse(Console.ReadLine());
+
+int[] array = RandomArray(size,min,max);
+PrintArray(array);
+int[] RandomArray(int size,int min,int max)
+{
+    int[] array = new int[size];
+
+    Random rand = new Random();
+
+    for (int i = 0; i < array.Length; i++)
+        array [i] = rand.Next(min,max); 
+      return array;
+}
+void PrintArray(int[]array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine(array[i]);   
+    }
+}
 
     
 

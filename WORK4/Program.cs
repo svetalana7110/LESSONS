@@ -98,11 +98,11 @@ void FillArray(double[] array)
 }
 double CalculateMaxMinDiff(double[] array)
 {
-    double diff = 0;    
+    double diff = 0;
+    double max = array[0];
+    double min = array[0];    
         for (int i = 0; i < array.Length; i++)
         {
-            double max = array[0];
-            double min = array[0];
             if(array[i] > max) max = array [i];              
             if(array[i] < min) min = array [i];
             diff = max - min;

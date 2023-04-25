@@ -73,7 +73,6 @@ int CalculatePositiveSum(int[] array)
             sumPositive += array[i];
         }
     }
-
     return sumPositive;
 }
 /*Задайте массив заполненный случайными положительными 
@@ -81,8 +80,8 @@ int CalculatePositiveSum(int[] array)
 количество чётных чисел в массиве.
 [345, 897, 568, 234] -> 2*/
 Console.WriteLine("Введите размер массива:  ");
-int[] array = new int[length];
-int[] array = GenerateArray(length);
+int[] array = new int[array];
+int[] array = GenerateArray(array);
 PrintArray(array);
 
 int count = CountEvenNumbers(array);

@@ -77,7 +77,84 @@ else
 {   
     Console.WriteLine("Введите пятизначное число ");
 }
-*/
+Продвинутый уровень искать полиндромы
 string tmp = "12321";
+
 string reversed = tmp.Reverse();
-Console.WriteLine(tmp == reversed);
+
+Console.WriteLine(tmp.Equals(reversed,StringComparison.
+CurrentCultureIgnoreCase));
+Метод, который переводит в массив  число
+int[] ConvertToArray(int number)
+{
+    int length = GetLengthNumber(number);
+    int[] result = new int[length];
+    for (int i = 0; i < length; i++)
+    {
+        result[i] = number % 10;
+        number = number / 10;
+    }
+    return result;
+}*/
+int number = int.Parse(Console.ReadLine());
+bool result = CheckPolindrom(number);
+Console.WriteLine(result);
+bool CheckPolindrom(int number)
+{
+    int[] array = ConvertToArray(number);
+    int[] reverseArray = ReverseArray(array);
+    bool result = Equals(array, reverseArray);
+    return result;
+}
+void PrintArray(int[] array)
+{
+    for (var i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine(array[i]);
+    }
+}
+bool Equals(int[] array1, int[] array2)
+{
+    if (array1.Length != array2.Length)
+    {
+        return false;
+    }
+    for (var i = 0; i < array1.Length; i++)
+    {
+        if (array1[i] != array2[i])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int[] ReverseArray(int[] array)
+{
+    int[] result = new int[array.Length];
+    for (var i = 0; i < array.Length; i++)
+    {
+        result[i] = array[array.Length - 1 - i];
+    }
+    return result;
+}
+int[] ConvertToArray(int number)
+{
+    int length = GetLengthNumber(number);
+    int[] result = new int[length];
+    for (int i = 0; i < length; i++)
+    {
+        result[i] = number % 10;
+        number = number / 10;
+    }
+    return result;
+}
+int GetLengthNumber(int number)
+{
+    int length = 0;
+    while (number != 0)
+    {
+        number = number / 10;
+        length++;
+    }
+    return length;
+}
