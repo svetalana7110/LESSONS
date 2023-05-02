@@ -98,7 +98,7 @@ void ChangeRowsArray(int[,] array)
     //array[2,0]=array[0,2]
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = i; j < array.GetLength(1); j++)
+        for (int j = i; j <  j++)
         {
             int tmp = array[i,j];
             array[j,i] = array[i,j];
@@ -124,7 +124,7 @@ void ChangeRowsArray(int[,] array)
 2 встречается 2 раз
 3 встречается 1 раз
 4 встречается 1 раз
-6 встречается 2 раза*/
+6 встречается 2 раза
 int[,] array = Generate2DArray(2, 20);
 PrintArray(array);
 Dictionary<int, int> result = FrequencyDictionaryElements(array);
@@ -173,4 +173,39 @@ Dictionary<int, int> FrequencyDictionaryElements(int[,] array)
         }
     }
     return dic;
+}
+Задача: как создать массив и вывести его на печать (CreateArray -создай массив,
+WriteArray -написать массив)*/
+Console.WriteLine("Введите размеры матриц: ");
+int m = InputNumbers("Введите число строк матрицы: ");
+int n = InputNumbers("Введите число столбцов матрицы: "); 
+int[,] Martrix = new int[m, n];
+CreateArray(Martrix); 
+WriteArray(Martrix);
+void CreateArray(int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      array[i, j] = new Random().Next(1,10);
+    }
+  }
+}
+int InputNumbers(string input)
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+}
+void WriteArray (int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      Console.Write(array[i,j] + " ");
+    }
+    Console.WriteLine();
+  }
 }
