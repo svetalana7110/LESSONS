@@ -108,9 +108,35 @@ void ChangeRowsArray(int[,] array)
 }
 Задача 57: Составить частотный словарь элементов двумерного
 массива. Частотный словарь содержит информацию о том, 
-
-
 сколько раз встречается элемент входных данных.
+Dictionary<int, int> - указывает тот тип данных, который будет 
+лежать в коллекциях
+HashSet<Random>
+List<string>
+Stopwatch -время работы метода метода
+using System;
+using System.Diagnostics;
+using System.Threading;
+ 
+public class Example
+{
+    public static void Main()
+    {
+        Stopwatch stopwatch = new Stopwatch();
+ 
+        stopwatch.Start();
+        Thread.Sleep(5000);
+        stopwatch.Stop();
+ 
+        Console.WriteLine("Elapsed Time is {0} ms", 
+    stopwatch.ElapsedMilliseconds);
+    }
+}
+ 
+/*
+    результат: Elapsed Time is 5000 ms
+
+
 Набор данных
 Частотный массив
 { 1, 9, 9, 0, 2, 8, 0, 9 }
@@ -124,7 +150,7 @@ void ChangeRowsArray(int[,] array)
 2 встречается 2 раз
 3 встречается 1 раз
 4 встречается 1 раз
-6 встречается 2 раза
+6 встречается 2 раза*/
 int[,] array = Generate2DArray(2, 20);
 PrintArray(array);
 Dictionary<int, int> result = FrequencyDictionaryElements(array);
@@ -175,7 +201,8 @@ Dictionary<int, int> FrequencyDictionaryElements(int[,] array)
     return dic;
 }
 Задача: как создать массив и вывести его на печать (CreateArray -создай массив,
-WriteArray -написать массив)*/
+WriteArray -написать массив)
+
 Console.WriteLine("Введите размеры матриц: ");
 int m = InputNumbers("Введите число строк матрицы: ");
 int n = InputNumbers("Введите число столбцов матрицы: "); 
