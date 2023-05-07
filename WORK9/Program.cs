@@ -39,7 +39,7 @@ m = 2, n = 3 -> A(m,n) = 9
 m = 3, n = 2 -> A(m,n) = 29 
         n+1             m=0
 А(m,n)= A(m-1,1)        m>0,n=0
-        A(m-1,A(m,n-1)) m>0,n>0
+        A(m-1,A(m,n-1)) m>0,n>0*/
 
 Console.WriteLine("Введите начальное число M:");
 int numberM = int.Parse(Console.ReadLine());
