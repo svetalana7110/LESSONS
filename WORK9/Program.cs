@@ -2,14 +2,14 @@
 все натуральные числа в промежутке от N до 1. Выполнить с 
 помощью рекурсии.
 N = 5 -> "5, 4, 3, 2, 1"
-N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
-Print(5, 1);
+N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"*/
+Print(1, 9);
 void Print(int number, int i)
 {
-    if (i <= number)
+    if (i >= number)
     {
         Console.Write($"{i} ");
-        Print(number, i + 1);
+        Print(number, i - 1);
     }
 }
 /* Задача 66.Задайте значения M и N. Напишите программу, которая найдёт 
@@ -39,7 +39,7 @@ m = 2, n = 3 -> A(m,n) = 9
 m = 3, n = 2 -> A(m,n) = 29 
         n+1             m=0
 А(m,n)= A(m-1,1)        m>0,n=0
-        A(m-1,A(m,n-1)) m>0,n>0*/
+        A(m-1,A(m,n-1)) m>0,n>0
 
 Console.WriteLine("Введите начальное число M:");
 int numberM = int.Parse(Console.ReadLine());
