@@ -113,7 +113,7 @@ Dictionary<int, int> - указывает тот тип данных, котор
 лежать в коллекциях
 HashSet<Random>
 List<string>
-Stopwatch -время работы метода метода
+Stopwatch -время работы метода 
 using System;
 using System.Diagnostics;
 using System.Threading;
